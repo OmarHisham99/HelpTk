@@ -1,0 +1,7 @@
+.mat-mdc-tab-labels > div{
+  background: red;
+    border-radius: 15px;
+    border: none;
+    border-bottom: none;
+    color: #FFF;
+}
