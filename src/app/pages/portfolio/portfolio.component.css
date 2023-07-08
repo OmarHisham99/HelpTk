@@ -1,6 +1,11 @@
-.portfolio {
-  background-color: #EAF3FA;
+.portfolio,
+.clients {
+  background-color: #eaf3fa8a;
   padding-top: 100px;
+}
+
+.clients{
+  padding-bottom: 50px;
 }
 
 .portfolio .head {
@@ -80,4 +85,28 @@
   100%{
     transform: translateY(0);
   }
+}
+
+
+ .DragScroll .carousel-parent{
+  gap: 30px !important;
+  display: flex !important;
+  align-items: center;
+    height: 220px;
+}
+
+ .DragScroll .carousel-parent img{
+    border-radius: 20px;
+    box-shadow: 1px 1px 13px 0px #e0dcdc;
+}
+.custom-scrollbar ::ng-deep .drag-scroll-content {
+  overflow: hidden !important;
+}
+.custom-scrollbar ::ng-deep .drag-scroll-wrapper {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.custom-scrollbar ::ng-deep .drag-scroll-wrapper::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
