@@ -1,0 +1,39 @@
+<div class="services">
+  <div class="container">
+    <div style="width: 40%">
+      <h2 class="services-heading">Services</h2>
+      <p class="services-subHeading">
+        We believe clients drive businesses forward . they need the right tools
+        to do so. We offer our clients a comprehensive range of services with
+        leading technologies and products.
+      </p>
+    </div>
+
+    <div></div>
+
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="stepperContainer">
+          <div class="stepperCard" *ngFor="let item of stepperData" >
+            <div class="stepperCardImage">
+              <img
+                src="{{ item.Image }}"
+                style="height: 50px; width: 50px"
+                alt=""
+              />
+            </div>
+            <div class="stepperCardData">
+              <p>
+                {{ item.Label }}
+              </p>
+              <p>
+                {{ item.Description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">two</div>
+    </div>
+  </div>
+</div>
