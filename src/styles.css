@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    margin:  0 ; 
+    margin:  0 ;
     padding:  0 ;
 
 }
@@ -10,3 +10,58 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.ant-tabs-ink-bar-animated{
+  display: none !important;
+}
+
+.ant-tabs .ant-tabs-tab-active a
+{
+  color: #0E2E5C !important;
+  background: #F39B27 !important;
+  font-weight: 500 !important;
+}
+
+.ant-tabs-tab+.ant-tabs-tab {
+  margin: 0 0 0 10px;
+}
+
+
+ngb-carousel {
+  max-width: 700px;
+  margin: 50px auto;
+}
+ngb-carousel img {
+  width: 100%;
+  outline: none;
+}
+ngb-carousel {
+  width: inherit;
+  height: inherit;
+}
+.carousel-inner {
+  overflow: visible;
+}
+.carousel-item {
+  display: flex !important;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s ease-in-out, visibility 1.2s;
+  z-index: -1;
+}
+.carousel-item.active{
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+.carousel-control-prev {
+   z-index: 20;
+}
+
+.carousel-control-next {
+   z-index: 20;
+}
+.carousel-indicators{
+  z-index: 20;
+}

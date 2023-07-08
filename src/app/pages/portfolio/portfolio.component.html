@@ -1,0 +1,69 @@
+<div class="portfolio">
+  <div class="container">
+    <div class="row">
+      <h2 class="head">Portfolio</h2>
+      <nz-tabset nzLinkRouter>
+        <nz-tab class="mikl-tab">
+          <a *nzTabLink nz-tab-link [routerLink]="['.']" [queryParams]="{ tab: 'one' }" queryParamsHandling="merge">
+            All
+          </a>
+          <div class="content">
+            <div class="imgParent"><img src="assets/p-1 (1).png"/></div>
+            <div class="imgParent"><img src="assets/p-1 (2).png"/></div>
+            <div class="imgParent"><img src="assets/p-1 (3).png"/></div>
+            <div class="imgParent"><img src="assets/p-1 (4).png"/></div>
+            <div class="imgParent"><img src="assets/p-1 (5).png"/></div>
+            <div class="imgParent"><img src="assets/p-1 (6).png"/></div>
+          </div>
+        </nz-tab>
+        <nz-tab class="mikl-tab">
+          <a *nzTabLink nz-tab-link [routerLink]="['.']" [queryParams]="{ tab: 'two' }" queryParamsHandling="merge">
+            Websites
+          </a>
+            <div class="content">
+              <div class="imgParent"><img src="assets/p-1 (3).png"/></div>
+              <div class="imgParent"><img src="assets/p-1 (4).png"/></div>
+              <div class="imgParent"><img src="assets/p-1 (5).png"/></div>
+            </div>
+        </nz-tab>
+        <nz-tab class="mikl-tab">
+          <a *nzTabLink nz-tab-link [routerLink]="['.']" [queryParams]="{ tab: 'three' }" queryParamsHandling="merge">
+            Management
+          </a>
+          <div class="content">
+            <div class="imgParent"><img src="assets/p-1 (1).png"/></div>
+
+          </div>
+        </nz-tab >
+        <nz-tab class="mikl-tab">
+          <a *nzTabLink nz-tab-link [routerLink]="['.']" [queryParams]="{ tab: 'four' }" queryParamsHandling="merge">
+            Communication
+          </a>
+            <div class="content">
+              <div class="imgParent"><img src="assets/p-1 (1).png"/></div>
+
+              <div class="imgParent"><img src="assets/p-1 (2).png"/></div>
+
+            </div>
+        </nz-tab>
+        <nz-tab class="mikl-tab">
+          <a *nzTabLink nz-tab-link [routerLink]="['.']" [queryParams]="{ tab: 'five' }" queryParamsHandling="merge">
+            Development
+          </a>
+          <div class="content">
+            <div class="imgParent"><img src="assets/p-1 (1).png"/></div>
+
+            <div class="imgParent"><img src="assets/p-1 (2).png"/></div>
+
+            <div class="imgParent"><img src="assets/p-1 (6).png"/></div>
+          </div>
+        </nz-tab>
+      </nz-tabset>
+
+      <div class="showMoreParent">
+        <img src="assets/show more.png"/>
+
+      </div>
+    </div>
+  </div>
+</div>
