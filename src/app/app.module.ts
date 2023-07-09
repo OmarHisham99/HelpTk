@@ -22,6 +22,8 @@ import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { DragScrollModule } from 'ngx-drag-scroll';
 import { OurNewsComponent } from './pages/our-news/our-news.component';
+import { TestimonialsComponent } from './pages/testimonials/testimonials.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 registerLocaleData(en);
 
@@ -32,6 +34,7 @@ registerLocaleData(en);
     BodyComponent,
     PortfolioComponent,
     OurNewsComponent,
+    TestimonialsComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +48,7 @@ registerLocaleData(en);
     MenuComponent,
     NzTabsModule,
     DragScrollModule,
+    SlickCarouselModule
     ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }

@@ -1,0 +1,26 @@
+<div class="testimonials">
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <h6>What Others Say</h6>
+      <h2>Clients' Testimonial</h2>
+    </div>
+  </div>
+
+  <div class="slider-wrapper">
+    <!-- <button  [disabled]="currentSlideIndex === 0">Previous</button> -->
+    <img class="prev-arrow" src="assets/angle-left-b.svg" (click)="previousSlide()" />
+    <div class="slider-container">
+      <div class="slider-track" [ngStyle]="getSliderTrackStyle()">
+        <div *ngFor="let item of slideItems" class="slider-item">{{ item.text }}
+
+          <img src="assets/testi.png"/>
+        </div>
+      </div>
+    </div>
+    <!-- <button (click)="nextSlide()" [disabled]="currentSlideIndex === slideItems.length - 4">Next</button> -->
+    <img class="next-arrow" src="assets/angle-right-b.svg" (click)="nextSlide()" />
+</div>
+
+
+</div>

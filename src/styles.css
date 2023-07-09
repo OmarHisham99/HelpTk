@@ -65,3 +65,12 @@ ngb-carousel {
 .carousel-indicators{
   z-index: 20;
 }
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider .slide-item {
+  display: inline-block;
+  width: calc(100% / 3); /* Adjust the width based on the number of slidesToShow */
+}
