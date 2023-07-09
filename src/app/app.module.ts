@@ -16,10 +16,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { MatMenuModule } from '@angular/material/menu';
 import { MenuComponent } from './pages/menu/menu.component';
-import { TabsComponent } from './pages/tabs/tabs.component';
+// import { TabsComponent } from './pages/tabs/tabs.component';
 import { OurServicesComponent } from './pages/our-services/our-services.component';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
+import { DragScrollModule } from 'ngx-drag-scroll';
+import { OurNewsComponent } from './pages/our-news/our-news.component';
+
 registerLocaleData(en);
 
 @NgModule({
@@ -28,6 +33,8 @@ registerLocaleData(en);
     HeaderComponent,
     BodyComponent,
     OurServicesComponent,
+    PortfolioComponent,
+    OurNewsComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,9 +46,14 @@ registerLocaleData(en);
     NzMenuModule,
     MatMenuModule,
     MenuComponent,
-    TabsComponent,
+    // TabsComponent,
     NzStepsModule,
     NzDividerModule,
+    NzTabsModule,
+    DragScrollModule,
+    ],
+  providers: [
+    { provide: NZ_I18N, useValue: en_US }
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
