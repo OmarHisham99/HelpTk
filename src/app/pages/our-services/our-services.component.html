@@ -14,12 +14,17 @@
     <div class="row">
       <div class="col-md-6 col-sm-12">
         <div class="stepperContainer">
-          <div class="stepperCard" *ngFor="let item of stepperData" >
-            <div class="stepperCardImage">
+          <div
+            class="stepperCard"
+            *ngFor="let item of stepperData; let i = index"
+            (click)="changeStep($event, i)"
+            [class.active]="stepNumber === i"
+          >
+            <div class="stepperCardImage" >
               <img
                 src="{{ item.Image }}"
                 style="height: 50px; width: 50px"
-                alt=""
+                alt="item.Image"
               />
             </div>
             <div class="stepperCardData">
@@ -33,7 +38,23 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-sm-12">two</div>
+      <div class="col-md-6 col-sm-12">
+        <div class="displayedData">
+          <div class="displayedText">
+            <p>{{ stepperData[stepNumber].Label }}</p>
+            <p>
+              {{ stepperData[stepNumber].DisplayedText }}
+            </p>
+          </div>
+          <div class="displayedImg">
+            <img
+              src="{{ stepperData[stepNumber].DisplayedImg }}"
+              alt=""
+              style="width: 100%"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

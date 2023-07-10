@@ -1,6 +1,7 @@
 .services {
-  background-color: #eaf3fa;
-  height: 100%;
+  background-color: #f8fbfd;
+
+  height: fit-content;
 }
 
 .services-heading {
@@ -32,6 +33,12 @@
 
 /* write css to make steepperCardImage background color orange when hover and cursor is pointer */
 .stepperCard:hover .stepperCardImage {
+  background-color: var(--main-secondary, #f39b27);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.stepperCard.active .stepperCardImage {
   background-color: var(--main-secondary, #f39b27);
   transition: 0.5s;
   cursor: pointer;
@@ -71,4 +78,45 @@
   bottom: 15px;
   font-size: 16px;
   line-height: 24px;
+}
+
+.displayedData {
+  border-radius: 32px;
+  border: 5px solid var(--neutral-neutral, #272727);
+  background: var(--tints-tint-3, #eaf3fa);
+  height: 32rem;
+  display: flex;
+  width: 700px;
+}
+
+.displayedText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  width: 50%;
+}
+
+.displayedText :nth-child(1) {
+  font-size: 20px;
+  font-weight: 600;
+  /* line-height: 64px; */
+  font-family: poppins;
+  line-height: 32px;
+}
+
+.displayedText :nth-child(2) {
+  color: var(--neutral-nutral-tint-1, #656565);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.displayedImg {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
