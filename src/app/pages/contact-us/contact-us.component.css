@@ -1,0 +1,110 @@
+.contactUs {
+  background-color: #eaf3fa8a;
+  padding-top: 10%;
+}
+
+.contact-card {
+  display: flex;
+  justify-content: center;
+  border-radius: 16px;
+  background: var(--main-primary, #0e2e5c);
+  height: 50%;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 2rem;
+}
+.card-header {
+  color: #f4f9fc;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 64px;
+}
+.card-subtitle {
+  color: var(--tints-tint-4, #f4f9fc);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 2px;
+}
+
+.contact-data {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+input {
+  border-radius: 16px;
+  color: #f4f9fc;
+  border-color: #0b2449;
+  background: var(--shade-shade-3, #0b2449);
+}
+
+textarea {
+  border-radius: 10px;
+  color: #f4f9fc;
+  border-color: #0b2449;
+  background-color: var(--shade-shade-3, #0b2449);
+}
+
+.btn-place {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  width: 200px;
+  border-radius: 16px;
+  background: var(--main-secondary, #f39b27);
+}
+
+button:hover {
+  background: var(--main-secondary-hover, #0b2449);
+}
+
+.photo-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("../../../assets/contact-bck.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-left: 50px;
+  filter: brightness(0.5);
+
+  /* Blur the background image */
+
+  /* Keep the color unaffected by brightness */
+
+  /* Combine all filter effects */
+  filter: brightness(0.5) saturate(100%);
+}
+
+.heading {
+  color: var(--tints-tint-4, #f4f9fc);
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 133.333% */
+}
+
+.subHeading {
+  color: var(--tints-tint-4, #f4f9fc);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  z-index: 1;
+  line-height: 24px; /* 171.429% */
+}

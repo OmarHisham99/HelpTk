@@ -16,6 +16,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { MatMenuModule } from '@angular/material/menu';
 import { MenuComponent } from './pages/menu/menu.component';
+import { TextFieldModule } from '@angular/cdk/text-field';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 // import { TabsComponent } from './pages/tabs/tabs.component';
 import { OurServicesComponent } from './pages/our-services/our-services.component';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
@@ -24,6 +27,8 @@ import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { DragScrollModule } from 'ngx-drag-scroll';
 import { OurNewsComponent } from './pages/our-news/our-news.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 
 registerLocaleData(en);
 
@@ -35,6 +40,8 @@ registerLocaleData(en);
     OurServicesComponent,
     PortfolioComponent,
     OurNewsComponent,
+    AboutUsComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +58,9 @@ registerLocaleData(en);
     NzDividerModule,
     NzTabsModule,
     DragScrollModule,
+    TextFieldModule,
+    NzInputModule,
+    NzButtonModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
 

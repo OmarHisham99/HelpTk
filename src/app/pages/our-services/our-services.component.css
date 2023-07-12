@@ -1,7 +1,9 @@
 .services {
   background-color: #f8fbfd;
-
+  padding-top: 10%;
   height: fit-content;
+  height: -moz-fit-content; /* Firefox 3+, Firefox for Android 4+ */
+  height: -webkit-fit-content;
 }
 
 .services-heading {
@@ -29,6 +31,8 @@
   gap: 15px;
   cursor: pointer;
   width: fit-content;
+  width: -moz-fit-content; /* Firefox 3+, Firefox for Android 4+ */
+  width: -webkit-fit-content;
 }
 
 /* write css to make steepperCardImage background color orange when hover and cursor is pointer */

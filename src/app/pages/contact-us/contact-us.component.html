@@ -1,0 +1,68 @@
+<div class="contactUs">
+  <div class="container">
+    <div class="contact-card row">
+      <div class="contact-form col-md-8 col-sm-12">
+        <div>
+          <p class="card-header">Contact Us</p>
+          <p class="card-subtitle">waiting for your inquiries</p>
+        </div>
+        <form class="contact-data" (ngSubmit)="handleRequest()">
+          <input
+            required="true"
+            nz-input
+            nzSize="large"
+            placeholder="Your Name"
+            [(ngModel)]="Name"
+          />
+          <input
+            required="true"
+            nz-input
+            nzSize="large"
+            placeholder="Enter Your Phone Number"
+            [(ngModel)]="PhoneNumber"
+          />
+          <input
+            required="true"
+            nz-input
+            nzSize="large"
+            placeholder="Enter Your Email"
+            [(ngModel)]="Email"
+          />
+          <textarea
+            placeholder="Leave Your Message"
+            rows="4"
+            nz-input
+            [(ngModel)]="Message"
+          ></textarea>
+          <div class="btn-place">
+            <button
+              nz-button
+              nzType="primary"
+              nzSize="large"
+              nzShape="round"
+              type="submit"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="photo-section col-md-4 col-sm-12">
+        <p class="heading">Contact Info</p>
+        <p class="subHeading">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid,
+          natus delectus, vel nostrum accusamus, quo atque minus veniam nemo
+          consequuntur vitae accusantium harum cupiditate placeat blanditiis ad
+          quisquam soluta. Voluptas.
+        </p>
+        <p class="heading">Address</p>
+        <p class="subHeading">4455 Aldeyafa Street/ Najran/ KSA</p>
+        <p class="heading">Phone Number</p>
+        <p class="subHeading">(017) 522 2254</p>
+
+        <p class="heading">Email</p>
+        <p class="subHeading">Admin@Helptk.com</p>
+      </div>
+    </div>
+  </div>
+</div>
