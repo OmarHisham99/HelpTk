@@ -29,6 +29,9 @@ import { DragScrollModule } from 'ngx-drag-scroll';
 import { OurNewsComponent } from './pages/our-news/our-news.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { TestimonialsComponent } from './pages/testimonials/testimonials.component';
+import { FooterComponent } from './pages/footer/footer.component';
+import { MapComponent } from './pages/map/map.component';
 
 registerLocaleData(en);
 
@@ -42,6 +45,9 @@ registerLocaleData(en);
     OurNewsComponent,
     AboutUsComponent,
     ContactUsComponent,
+    TestimonialsComponent,
+    FooterComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
