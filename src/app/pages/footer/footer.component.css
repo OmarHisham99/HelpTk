@@ -1,0 +1,156 @@
+/* footer */
+.footer {
+  background-color: #203750;
+  min-height: 450px;
+}
+.footerContainer {
+  padding: 60px 0px 20px 0px;
+}
+@media (max-width: 1200px) {
+  .contactForm {
+    margin-top: 30px !important;
+  }
+}
+.footerP {
+  color: #677d96;
+  font-family: "Roboto";
+  margin: 20px 0px;
+}
+.SpecialHeader {
+  color: #fff;
+  font-family: "Poppins";
+  font-weight: 300;
+}
+
+.SpecialHeader.white{
+  font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.linkslist {
+  color: #7187a0;
+  font-size: 18px;
+  transition: 0.3s;
+  list-style: none;
+  padding-left: 10px;
+}
+
+.linkslist a {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-family: "Poppins";
+  margin-bottom: 5px;
+}
+.linkslist a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.contact {
+  display: flex;
+  gap: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.contactDetails {
+  color: #7187a0;
+  font-family: "Roboto";
+}
+.social {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 15px;
+  gap: 20px;
+}
+
+.contactForm {
+  background-color: #0a1e33;
+  border-radius: 10px;
+  padding: 25px;
+}
+.contactUsHeader {
+  font-family: "Poppins";
+  color: #fff;
+  font-weight: 100;
+  font-size: 25px;
+}
+.contactUsP {
+  color: #99a1a9;
+  font-family: "Roboto";
+}
+.contactFormInput {
+  background: transparent;
+  outline: none;
+  padding: 12px;
+  border: 1px solid;
+  border-color: #606e7e;
+  border-radius: 10px;
+  width: 100%;
+  color: #fff;
+  transition: 0.3s;
+  margin-bottom: 15px;
+}
+.contactFormInput:focus {
+  border-color: #66c3ef !important;
+}
+.contactFormBtn {
+  border: none;
+  padding: 10px 55px !important ;
+  border-radius: 7px;
+  background: #66c3ef;
+  font-weight: 600;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  transition: 0.3s all;
+  border: 1px solid transparent !important;
+}
+
+.contactFormBtn:hover {
+  background-color: transparent !important;
+  color: #fff;
+  border: 1px solid #fff !important;
+}
+
+.about-p{
+  color: #FFF;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.about-span{
+  color: #FFF;
+    font-weight: 200;
+    font-family: "Poppins";
+}
+
+.social-container{
+  display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+    margin-top: 19px;
+}
+
+.social-container img{
+  background: transparent;
+  border: 1px solid #FFF;
+  padding: 8px;
+  border-radius: 50%;
+  width: 43px;
+    height: 41px;
+    object-fit: contain;
+}
+
+.container.bottomBorder{
+
+  border-bottom: 1px solid #FFF;
+  padding-bottom: 50px;
+
+}
+/* footer */

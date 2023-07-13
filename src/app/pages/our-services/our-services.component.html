@@ -1,0 +1,60 @@
+<div class="services">
+  <div class="container">
+    <div style="width: 40%">
+      <h2 class="services-heading">Services</h2>
+      <p class="services-subHeading">
+        We believe clients drive businesses forward . they need the right tools
+        to do so. We offer our clients a comprehensive range of services with
+        leading technologies and products.
+      </p>
+    </div>
+
+    <div></div>
+
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="stepperContainer">
+          <div
+            class="stepperCard"
+            *ngFor="let item of stepperData; let i = index"
+            (click)="changeStep($event, i)"
+            [class.active]="stepNumber === i"
+          >
+            <div class="stepperCardImage" >
+              <img
+                src="{{ item.Image }}"
+                style="height: 50px; width: 50px"
+                alt="item.Image"
+              />
+            </div>
+            <div class="stepperCardData">
+              <p>
+                {{ item.Label }}
+              </p>
+              <p>
+                {{ item.Description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="displayedData">
+          <div class="displayedText">
+            <p>{{ stepperData[stepNumber].Label }}</p>
+            <p>
+              {{ stepperData[stepNumber].DisplayedText }}
+            </p>
+          </div>
+          <div class="displayedImg">
+            <img
+              src="{{ stepperData[stepNumber].DisplayedImg }}"
+              alt=""
+              style="width: 100%"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
