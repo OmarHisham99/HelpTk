@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { WebDataService } from 'src/app/web-data.service';
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -11,7 +11,21 @@ export class ContactUsComponent {
   PhoneNumber: string = '';
   Message: string = '';
 
-  handleRequest() {
-    console.log(this.Name);
+  constructor(private webDataService: WebDataService) {
+    this.fetchData();
+  }
+
+  contactUsInfo: any;
+
+  fetchData(): void {
+    this.getContactInfo();
+  }
+
+  handleRequest(): void {}
+  getContactInfo(): void {
+    this.webDataService.getCompanyInfo().subscribe((data) => {
+      this.contactUsInfo = data.data;
+      console.log(this.contactUsInfo);
+    });
   }
 }

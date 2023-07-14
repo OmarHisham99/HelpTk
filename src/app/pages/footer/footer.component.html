@@ -1,4 +1,4 @@
-<div class=footer>
+<div class="footer">
   <div class="container bottomBorder">
     <div class="row footerContainer">
       <div item class="col-xs-12 col-md-12 col-lg-4 mb-2">
@@ -8,7 +8,7 @@
           height={68}
           alt="ABNOUR Software House"
         /> -->
-        <img src="assets/white-logo.png" style="max-width: 100%;"/>
+        <img src="assets/white-logo.png" style="max-width: 100%" />
 
         <!-- <span style="color: #FFF; font-weight: 300">
           © ABNOUR 2023
@@ -16,72 +16,92 @@
       </div>
 
       <div
-      class="col-xs-12 col-lg-3"
-      style="display: grid; place-content: center; align-content: flex-start; padding-top: 15px;"
-    >
-    <h3 class="SpecialHeader white">who we are..</h3>
-    <p class="about-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut </p>
-    <span class="about-span">Follow Us on Social Media :</span>
-    <div class="social-container">
-      <img src="assets/t.png"/>
-      <img src="assets/f.png"/>
-      <img src="assets/y.png"/>
-      <img src="assets/l.png"/>
-    </div>
-    </div>
-
-
-      <div
         class="col-xs-12 col-lg-3"
-        style="display: grid; place-content: center; align-content: flex-start; padding-top: 15px;"
+        style="
+          display: grid;
+          place-content: center;
+          align-content: flex-start;
+          padding-top: 15px;
+        "
       >
-
-        <h3 class="SpecialHeader">Useful Links</h3>
-        <ul class="linkslist">
-          <a href="/AboutUs">
-            <li>About Us</li>
-          </a>
-          <a href="/Services">
-            <li>Services</li>
-          </a>
-          <a href="/Portfolio">
-            <li>Portfolio</li>
-          </a>
-          <a href="/Blogs">
-            <li>Blogs</li>
-          </a>
-          <a href="/ContactUs">
-            <li>Contact Us</li>
-          </a>
-        </ul>
-
+        <h3 class="SpecialHeader white">who we are..</h3>
+        <p class="about-p">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut
+        </p>
+        <span class="about-span">Follow Us on Social Media :</span>
+        <div class="social-container">
+          <img src="assets/t.png" alt="" />
+          <img src="assets/f.png" alt="" />
+          <img src="assets/y.png" alt="" />
+          <img src="assets/l.png" alt="" />
+        </div>
       </div>
 
       <div
-      class="col-xs-12 col-lg-2"
-      style="display: grid; place-content: center; align-content: flex-start; padding-top: 15px;"
-    >
-    <h3 class="SpecialHeader">Important Links</h3>
-    <ul class="linkslist">
-        <a href="/AboutUs">
-          <li>Privacy Policy</li>
-        </a>
-        <a href="/Services">
-          <li>Terms and Conditions</li>
-        </a>
-        <a href="/Portfolio">
-          <li>Settings</li>
-        </a>
+        class="col-xs-12 col-lg-3"
+        style="
+          display: grid;
+          place-content: center;
+          align-content: flex-start;
+          padding-top: 15px;
+        "
+      >
+        <h3 class="SpecialHeader">Useful Links</h3>
+        <ul class="linkslist">
+          <li>
+            <a
+              class="nav-link active"
+              aria-current="page"
+              (click)="scrollToSection($event, 'body')"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a (click)="scrollToSection($event, 'about-us')">About Us</a>
+          </li>
 
-      </ul>
+          <li (click)="scrollToSection($event, 'our-services')">
+            <a>Our Services</a>
+          </li>
+          <li>
+            <a (click)="scrollToSection($event, 'portfolio')">Portfolio</a>
+          </li>
+          <li>
+            <a (click)="scrollToSection($event, 'our-news')">News</a>
+          </li>
+          <li>
+            <a (click)="scrollToSection($event, 'contact-us')">Contact Us</a>
+          </li>
+        </ul>
+      </div>
 
-    </div>
-
+      <div
+        class="col-xs-12 col-lg-2"
+        style="
+          display: grid;
+          place-content: center;
+          align-content: flex-start;
+          padding-top: 15px;
+        "
+      >
+        <h3 class="SpecialHeader">Important Links</h3>
+        <ul class="linkslist">
+          <li>
+            <a> Privacy Policy </a>
+          </li>
+          <li><a>Terms and Conditions </a></li>
+          <li><a>Settings</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 
-  <div class="container" style="display:flex; justify-content: space-between; margin-top: 10px;">
-    <span style="color:#FFF;"> All rights Reserved @HelpTK.com </span>
-    <span style="color:#FFF;">HelpTK - 2023</span>
+  <div
+    class="container"
+    style="display: flex; justify-content: space-between; margin-top: 10px"
+  >
+    <span style="color: #fff"> All rights Reserved @HelpTK.com </span>
+    <span style="color: #fff">HelpTK - 2023</span>
   </div>
 </div>

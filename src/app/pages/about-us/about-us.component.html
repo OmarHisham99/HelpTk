@@ -2,22 +2,14 @@
   <div class="container">
     <div class="row landing-row">
       <div class="col-sm-12 col-md-6 flow-imgs">
-        <img src="assets/dummy2.jpg" alt="" />
-        <img src="assets/dummy2.jpg" alt="" />
+        <img src="{{ aboutUs_images.secondImage }}" alt="" />
+        <img src="{{ aboutUs_images.firstImage }}" alt="" />
       </div>
       <div class="col-sm-12 col-md-6 about-text">
         <h2>HELP<span>TK</span></h2>
         <ul class="about-points">
           <li>
-            IT assistance is a leader in the world of communications, IT
-            solutions, electronic protection technologies and innovative
-            solutions.
-          </li>
-          <li>
-            We offer innovative solutions and specialized support and are
-            committed to providing services and solutions that can provide
-            technology solutions (From start to finish) as well as consulting
-            solutions when required.
+            {{ aboutUs_description[0].description }}
           </li>
         </ul>
         <button class="landingBtn">Explore Our Projects</button>

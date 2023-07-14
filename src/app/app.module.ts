@@ -32,6 +32,7 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { TestimonialsComponent } from './pages/testimonials/testimonials.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { MapComponent } from './pages/map/map.component';
+import { WebDataService } from './web-data.service';
 
 registerLocaleData(en);
 
@@ -68,7 +69,7 @@ registerLocaleData(en);
     NzInputModule,
     NzButtonModule,
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
+  providers: [{ provide: NZ_I18N, useValue: en_US }, WebDataService],
 
   bootstrap: [AppComponent],
 })
