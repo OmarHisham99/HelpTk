@@ -91,6 +91,7 @@
   height: 32rem;
   display: flex;
   width: 700px;
+  max-width: 100%;
 }
 
 .displayedText {

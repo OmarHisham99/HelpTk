@@ -24,4 +24,7 @@ export class WebDataService {
   getHomeData(): Observable<any> {
     return this.http.get(this.apiUrl + 'Home/Get?Language=EN');
   }
+  getWhoWeAre(): Observable<any> {
+    return this.http.get('http://testabdotest-001-site1.htempurl.com/api/whoWeAre/Get');
+  }
 }

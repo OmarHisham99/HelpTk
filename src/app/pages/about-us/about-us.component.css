@@ -167,11 +167,7 @@
   transform: translateY(0);
   visibility: visible;
 }
-.About2 .about-circle-parent .about-element:hover::after {
-  content: "We hold ourselves to the highest standards. We care about your application as much as you do. You can count on us ..";
-  top: 50%;
-  transform: translateY(-50%);
-}
+
 
 .Application_Releases {
   position: relative;
