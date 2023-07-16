@@ -171,11 +171,28 @@
   top: -50px;
   content: "";
 }
-.About2 .about-circle-parent .about-element:hover::after {
+
+.About2 .about-circle-parent .about-element div{
+  position: absolute;
+  left: 125%;
+  width: 400px;
+  background: #000;
+  padding: 10px;
+  border-radius: 10px;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+.About2 .about-circle-parent .about-element:hover div{
+  transform: translateY(0);
+  visibility: visible;
+
+}
+/* .About2 .about-circle-parent .about-element:hover::after {
   content: "We hold ourselves to the highest standards. We care about your application as much as you do. You can count on us ..";
   top: 50%;
   transform: translateY(-50%);
-}
+} */
 
 .Application_Releases {
   position: relative;
