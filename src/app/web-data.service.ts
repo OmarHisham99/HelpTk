@@ -24,4 +24,12 @@ export class WebDataService {
   getHomeData(): Observable<any> {
     return this.http.get(this.apiUrl + 'Home/Get?Language=EN');
   }
+
+  getClients(): Observable<any> {
+    return this.http.get(this.apiUrl + 'Client/Get?Language=EN');
+  }
+
+  getWhoWewAre(): Observable<any> {
+    return this.http.get(this.apiUrl + 'WhoWeAre/Get?Language=EN');
+  }
 }

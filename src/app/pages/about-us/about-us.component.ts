@@ -9,6 +9,7 @@ import { WebDataService } from 'src/app/web-data.service';
 export class AboutUsComponent {
   aboutUs_images: any;
   aboutUs_description: any;
+  whoWeAre: any;
 
   constructor(private webDataService: WebDataService) {
     this.fetchData();
@@ -21,6 +22,9 @@ export class AboutUsComponent {
     this.webDataService.getAboutUsDescription().subscribe((data) => {
       this.aboutUs_description = data.data;
       console.log(this.aboutUs_description);
+    });
+    this.webDataService.getWhoWewAre().subscribe((data) => {
+      this.whoWeAre = data.data;
     });
   }
 }

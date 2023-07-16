@@ -172,7 +172,7 @@
   content: "";
 }
 
-.About2 .about-circle-parent .about-element div{
+.About2 .about-circle-parent .about-element div {
   position: absolute;
   left: 125%;
   width: 400px;
@@ -183,10 +183,9 @@
   visibility: hidden;
   transition: 0.3s ease;
 }
-.About2 .about-circle-parent .about-element:hover div{
+.About2 .about-circle-parent .about-element:hover div {
   transform: translateY(0);
   visibility: visible;
-
 }
 /* .About2 .about-circle-parent .about-element:hover::after {
   content: "We hold ourselves to the highest standards. We care about your application as much as you do. You can count on us ..";

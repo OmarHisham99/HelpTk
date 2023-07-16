@@ -90,11 +90,15 @@
   gap: 30px !important;
   display: flex !important;
   align-items: center;
+  justify-content: center;
   height: 220px;
 }
 
 .DragScroll .carousel-parent img {
   border-radius: 20px;
+
+  width: 312px;
+  height: 202px;
   box-shadow: 1px 1px 13px 0px #e0dcdc;
 }
 .custom-scrollbar ::ng-deep .drag-scroll-content {
