@@ -84,7 +84,7 @@
 
 .About2 {
   height: 800px;
-    background-color: #eaf3fa;
+  background-color: #eaf3fa;
 }
 
 @media (max-width: 768px) {
@@ -121,86 +121,90 @@
   justify-content: center;
   align-items: center;
 }
- .about-element {
+
+@media (max-width: 765px) {
+  .About2 .about-circle-parent {
+    max-width: 100%;
+  }
+}
+.about-element {
   position: relative !important;
 }
 
-/* //large circle */ .about-element::before{
+/* //large circle */
+.about-element::before {
   content: "";
   height: 60px;
   width: 300px;
   left: -100px;
   top: 0;
-  background-color: #F6C98F;
+  background-color: #f6c98f;
   position: absolute;
   border-radius: 26px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 500;
-  color: #0E2E5C;
+  color: #0e2e5c;
   font-size: 21px;
-
 }
-  /* //small circle */
- .about-element::after{
+/* //small circle */
+.about-element::after {
   content: "";
   height: 60px;
   width: 60px;
   left: -100px;
   top: 0;
-  background-color: #FD9C26;
+  background-color: #fd9c26;
   position: absolute;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #FFF;
+  color: #fff;
   font-size: 18px;
 }
 
- .about-element.one::after{
-  content: "1"
+.about-element.one::after {
+  content: "1";
 }
- .about-element.two::after{
-  content: "2"
+.about-element.two::after {
+  content: "2";
 }
- .about-element.three::after{
-  content: "3"
-}
-
- .about-element.one::before{
-  content:"Our Mission"
-}
- .about-element.two::before{
-  content:"Our Vision"
-}
- .about-element.three::before{
-  content:"Our Goals"
+.about-element.three::after {
+  content: "3";
 }
 
+.about-element.one::before {
+  content: "Our Mission";
+}
+.about-element.two::before {
+  content: "Our Vision";
+}
+.about-element.three::before {
+  content: "Our Goals";
+}
 
-
- .about-element.one {
+.about-element.one {
   position: absolute;
   top: 0px;
   position: absolute;
   top: -100px;
-    right: -50px;
+  right: -50px;
 }
- .about-element.two {
+.about-element.two {
   position: absolute;
   right: -35%;
   top: 50%;
   transform: translateY(-50%);
 }
- .about-element.three {
+.about-element.three {
   position: absolute;
   top: 110%;
   right: -50px;
 }
 
- .about-element {
+.about-element {
   position: relative;
 }
 
@@ -231,6 +235,34 @@
   width: auto;
   margin-top: 56px;
   max-width: 500px;
+}
+
+@media (max-width: 1163px) {
+  .about-element {
+    right: 0;
+  }
+  .about-element.one {
+    top: 0;
+    right: 0px;
+  }
+  .about-element.two {
+    top: 100px;
+    right: 0px;
+  }
+  .about-element.three {
+    top: 200px;
+    right: 0px;
+  }
+  .about-element::before {
+    left: 0;
+  }
+  .about-element::after {
+    left: 0;
+  }
+}
+
+.About2 .container .row {
+  row-gap: 30px;
 }
 
 /* .About2 .about-circle-parent .about-element:hover::after {

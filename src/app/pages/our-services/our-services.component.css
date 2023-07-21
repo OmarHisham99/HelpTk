@@ -14,6 +14,19 @@
   font-family: poppins;
 }
 
+.servicesLeftSide {
+  width: 40%;
+}
+
+@media (max-width: 765px) {
+  .servicesLeftSide {
+    width: 100%;
+  }
+  .services {
+    padding: 45px 20px;
+  }
+}
+
 .services-subheading {
   font-size: 16px;
   font-weight: 400;
@@ -126,8 +139,7 @@
   flex-direction: column;
 }
 
-
-.displayedImg img{
+.displayedImg img {
   width: 230px;
   max-width: 100%;
 }
