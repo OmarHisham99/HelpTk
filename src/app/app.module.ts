@@ -12,7 +12,7 @@ import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { MatMenuModule } from '@angular/material/menu';
 import { MenuComponent } from './pages/menu/menu.component';
@@ -33,6 +33,9 @@ import { TestimonialsComponent } from './pages/testimonials/testimonials.compone
 import { FooterComponent } from './pages/footer/footer.component';
 import { MapComponent } from './pages/map/map.component';
 import { WebDataService } from './web-data.service';
+import { ScrollWatcherDirective } from './scroll-watcher.directive';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 registerLocaleData(en);
 
@@ -49,6 +52,7 @@ registerLocaleData(en);
     TestimonialsComponent,
     FooterComponent,
     MapComponent,
+    ScrollWatcherDirective,
   ],
   imports: [
     BrowserModule,
@@ -68,9 +72,21 @@ registerLocaleData(en);
     TextFieldModule,
     NzInputModule,
     NzButtonModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'en',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }, WebDataService],
 
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}

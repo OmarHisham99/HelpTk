@@ -1,6 +1,6 @@
 import { Component, ElementRef } from '@angular/core';
 import { WebDataService } from 'src/app/web-data.service';
-
+import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
@@ -11,7 +11,8 @@ export class BodyComponent {
   youtubeLink: string;
   constructor(
     private webDataService: WebDataService,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    public translate: TranslateService
   ) {
     this.fetchData();
     this.youtubeLink = 'https://www.youtube.com/embed/';

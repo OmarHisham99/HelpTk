@@ -39,35 +39,41 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a
+            appScrollWatcher="body"
             class="nav-link active"
             aria-current="page"
             (click)="scrollToSection($event, 'body')"
-            >Home</a
+            >{{ "HOME" | translate }}</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="scrollToSection($event, 'about-us')"
-            >About Us</a
+          <a
+            appScrollWatcher="about-us"
+            class="nav-link"
+            (click)="scrollToSection($event, 'about-us')"
+            >{{ "ABOUTUS" | translate }}</a
           >
         </li>
 
         <li class="nav-item" (click)="scrollToSection($event, 'our-services')">
-          <a class="nav-link">Our Services</a>
+          <a appScrollWatcher="our-services" class="nav-link">{{
+            "OURSERVICES" | translate
+          }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="scrollToSection($event, 'portfolio')"
-            >Portfolio</a
-          >
+          <a class="nav-link" (click)="scrollToSection($event, 'portfolio')">{{
+            "PORTFOLIO" | translate
+          }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="scrollToSection($event, 'our-news')"
-            >News</a
-          >
+          <a class="nav-link" (click)="scrollToSection($event, 'our-news')">{{
+            "NEWS" | translate
+          }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="scrollToSection($event, 'contact-us')"
-            >Contact Us</a
-          >
+          <a class="nav-link" (click)="scrollToSection($event, 'contact-us')">{{
+            "CONTACTUS" | translate
+          }}</a>
         </li>
       </ul>
       <div class="menuParent d-flex" role="search">
@@ -87,7 +93,7 @@
         class="contactBtn"
         style="color: #fff; background-color: #f39b27"
       >
-        Contact Us
+        {{ "CONTACTUS" | translate }}
       </button>
       <!-- <button nz-button nzType="primary">Primary Button</button> -->
     </div>

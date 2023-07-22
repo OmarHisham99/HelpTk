@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { WebDataService } from 'src/app/web-data.service';
-
+import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-about-us',
   templateUrl: './about-us.component.html',
@@ -11,7 +11,7 @@ export class AboutUsComponent {
   aboutUs_description: any;
   whoWeAre: any;
 
-  constructor(private webDataService: WebDataService) {
+  constructor(private webDataService: WebDataService, public translate: TranslateService) {
     this.fetchData();
   }
 

@@ -143,3 +143,9 @@
   width: 230px;
   max-width: 100%;
 }
+
+/* write direction rtl  */
+[dir="rtl"] .stepperCardData {
+  position: relative !important;
+  right: 80px !important;
+}

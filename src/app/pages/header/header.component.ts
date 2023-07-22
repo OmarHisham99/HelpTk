@@ -1,12 +1,15 @@
 import { Component, ElementRef } from '@angular/core';
-
+import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  constructor(private elementRef: ElementRef) {}
+  constructor(
+    private elementRef: ElementRef,
+    public translate: TranslateService
+  ) {}
 
   scrollToSection(e: Event, sectionId: string): void {
     const element = document.getElementById(sectionId);

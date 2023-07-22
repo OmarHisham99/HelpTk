@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-our-services',
   templateUrl: './our-services.component.html',
@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class OurServicesComponent {
   stepNumber = 0;
-
   stepperData = [
     {
       Label: 'Mobile Application',
@@ -59,6 +58,8 @@ export class OurServicesComponent {
     },
   ];
 
+  constructor(public translate: TranslateService) {}
+
   ngOnInit(): void {
     setInterval(() => {
       if (this.stepNumber == this.stepperData.length - 1) {
@@ -68,8 +69,6 @@ export class OurServicesComponent {
       this.stepNumber++;
     }, 3000);
   }
-
-  constructor() {}
 
   changeStep(e: Event, step: number) {
     this.stepNumber = step;
