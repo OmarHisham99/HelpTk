@@ -148,6 +148,8 @@
   color: #0e2e5c;
   font-size: 21px;
 }
+
+
 /* //small circle */
 .about-element::after {
   content: "";

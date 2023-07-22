@@ -1,13 +1,19 @@
 .landing {
   background-color: #eaf3fa;
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 .landing-row {
   min-height: calc(100vh - 96px);
   /* border: 1px solid red; */
-  padding-top: 100px;
-  gap: 30px;
+
+  row-gap: 30px;
+}
+
+@media (max-width: 765px) {
+  .landing-row {
+    padding-top: 100px;
+  }
 }
 
 .Circle {

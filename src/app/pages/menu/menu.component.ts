@@ -26,6 +26,16 @@ export class MenuComponent {
     localStorage.setItem('currentLang', lang);
     // this.currentLang = lang;
     const body = this.document.body;
+    const head = this.document.head;
+    this.document.documentElement.setAttribute(
+      'lang',
+      lang === 'ar' ? 'ar' : 'en'
+    );
+    this.document.documentElement.setAttribute(
+      'dir',
+      lang === 'ar' ? 'rtl' : 'ltr'
+    );
+
     body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
   }
 }
