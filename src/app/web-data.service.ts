@@ -32,4 +32,7 @@ export class WebDataService {
   getWhoWewAre(): Observable<any> {
     return this.http.get(this.apiUrl + 'WhoWeAre/Get?Language=EN');
   }
+  getOurNews(): Observable<any> {
+    return this.http.get(this.apiUrl + 'News/Get?Language=EN');
+  }
 }
