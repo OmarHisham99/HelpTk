@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { WebDataService } from '../../web-data.service';
+import { TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
@@ -7,7 +9,7 @@ import { WebDataService } from '../../web-data.service';
 })
 export class PortfolioComponent {
   clientsData: any;
-  constructor(private webDataService: WebDataService) {
+  constructor(private webDataService: WebDataService, public translate: TranslateService) {
     this.fetchClientsData();
   }
 

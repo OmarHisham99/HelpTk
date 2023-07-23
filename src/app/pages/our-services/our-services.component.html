@@ -3,9 +3,7 @@
     <div class="servicesLeftSide">
       <h2 class="services-heading">{{ "SERVICES" | translate }}</h2>
       <p class="services-subHeading">
-        We believe clients drive businesses forward . they need the right tools
-        to do so. We offer our clients a comprehensive range of services with
-        leading technologies and products.
+        {{ "SERVICESUBTITLE" | translate }}
       </p>
     </div>
 
@@ -27,7 +25,7 @@
                 alt="item.Image"
               />
             </div>
-            <div class="stepperCardData">
+            <div ngClass="checkLanguage ? stepperCardDataRtl : stepperCardData">
               <p>
                 {{ item.Label }}
               </p>

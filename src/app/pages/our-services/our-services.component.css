@@ -145,7 +145,7 @@
 }
 
 /* write direction rtl  */
-[dir="rtl"] .stepperCardData {
+.stepperCardDataRtl {
   position: relative !important;
   right: 80px !important;
 }

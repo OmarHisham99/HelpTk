@@ -3,33 +3,33 @@
     <div class="contact-card row">
       <div class="contact-form col-md-8 col-sm-12">
         <div>
-          <p class="card-header">Contact Us</p>
-          <p class="card-subtitle">waiting for your inquiries</p>
+          <p class="card-header">{{ "CONTACTUS" | translate }}</p>
+          <p class="card-subtitle">{{ "WAITINGFORINQUIRIES" | translate }}</p>
         </div>
         <form class="contact-data" (ngSubmit)="handleRequest()">
           <input
             required="true"
             nz-input
             nzSize="large"
-            placeholder="Your Name"
+            [placeholder]="'YOURNAME' | translate"
             [(ngModel)]="Name"
           />
           <input
             required="true"
             nz-input
             nzSize="large"
-            placeholder="Enter Your Phone Number"
+            [placeholder]="'ENTERYOURPHONENUMBER' | translate"
             [(ngModel)]="PhoneNumber"
           />
           <input
             required="true"
             nz-input
             nzSize="large"
-            placeholder="Enter Your Email"
+            [placeholder]="'ENTERYOUREMAIL' | translate"
             [(ngModel)]="Email"
           />
           <textarea
-            placeholder="Leave Your Message"
+            [placeholder]="'LEAVEYOURMESSAGE' | translate"
             rows="4"
             nz-input
             [(ngModel)]="Message"
@@ -42,25 +42,25 @@
               nzShape="round"
               type="submit"
             >
-              Send Message
+              {{ "SENDMESSAGE" | translate }}
             </button>
           </div>
         </form>
       </div>
       <div class="photo-section col-md-4 col-sm-12">
-        <p class="heading">Contact Info</p>
+        <p class="heading">{{ "CONTACTINFO" | translate }}</p>
         <p class="subHeading">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid,
           natus delectus, vel nostrum accusamus, quo atque minus veniam nemo
           consequuntur vitae accusantium harum cupiditate placeat blanditiis ad
           quisquam soluta. Voluptas.
         </p>
-        <p class="heading">Address</p>
+        <p class="heading">{{ "ADDRESS" | translate }}</p>
         <p class="subHeading">{{ contactUsInfo.address }}</p>
-        <p class="heading">Phone Number</p>
+        <p class="heading">{{ "PHONE" | translate }}</p>
         <p class="subHeading">{{ contactUsInfo.phone }}</p>
 
-        <p class="heading">Email</p>
+        <p class="heading">{{ "EMAIL" | translate }}</p>
         <p class="subHeading">{{ contactUsInfo.email }}</p>
       </div>
     </div>

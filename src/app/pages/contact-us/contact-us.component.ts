@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { WebDataService } from 'src/app/web-data.service';
+import { TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -11,7 +13,10 @@ export class ContactUsComponent {
   PhoneNumber: string = '';
   Message: string = '';
 
-  constructor(private webDataService: WebDataService) {
+  constructor(
+    private webDataService: WebDataService,
+    public translate: TranslateService
+  ) {
     this.fetchData();
   }
 

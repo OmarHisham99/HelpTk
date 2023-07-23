@@ -73,4 +73,7 @@ export class OurServicesComponent {
   changeStep(e: Event, step: number) {
     this.stepNumber = step;
   }
+  checkLanguage() {
+    return this.translate.currentLang == 'ar';
+  }
 }
