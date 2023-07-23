@@ -24,7 +24,6 @@ export class OurNewsComponent {
   fetchData(): void {
     this.webDataService.getOurNews().subscribe((data) => {
       this.ourNews = data.data;
-      console.log(this.ourNews);
     });
   }
 }
