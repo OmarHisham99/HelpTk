@@ -22,10 +22,10 @@
   font-weight: 300;
 }
 
-.SpecialHeader.white{
+.SpecialHeader.white {
   font-weight: 500;
-    font-size: 18px;
-    margin-bottom: 8px;
+  font-size: 18px;
+  margin-bottom: 8px;
 }
 .linkslist {
   color: #7187a0;
@@ -36,7 +36,7 @@
 }
 
 .linkslist a {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
   font-size: 18px;
   transition: 0.3s;
@@ -118,39 +118,49 @@
   border: 1px solid #fff !important;
 }
 
-.about-p{
-  color: #FFF;
-    width: 100%;
-    margin-bottom: 10px;
+.about-p {
+  color: #fff;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
-.about-span{
-  color: #FFF;
-    font-weight: 200;
-    font-family: "Poppins";
+.about-span {
+  color: #fff;
+  font-weight: 200;
+  font-family: "Poppins";
 }
 
-.social-container{
+.social-container {
   display: flex;
-    justify-content: flex-start;
-    gap: 16px;
-    margin-top: 19px;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-top: 19px;
 }
 
-.social-container img{
+.social-container img {
   background: transparent;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   padding: 8px;
   border-radius: 50%;
   width: 43px;
-    height: 41px;
-    object-fit: contain;
+  height: 41px;
+  object-fit: contain;
 }
 
-.container.bottomBorder{
-
-  border-bottom: 1px solid #FFF;
+.container.bottomBorder {
+  border-bottom: 1px solid #fff;
   padding-bottom: 50px;
-
 }
 /* footer */
+.footer__icon {
+  color: #fff;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  font-size: 25px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

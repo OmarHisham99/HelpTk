@@ -310,6 +310,13 @@
   }
 }
 
+.about-element:hover .externalText {
+  background-color: #f6c98f;
+  color: #000 !important;
+  z-index: 1;
+  top: 0;
+}
+
 .About2 .container .row {
   row-gap: 30px;
 }
