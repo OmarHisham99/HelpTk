@@ -11,7 +11,10 @@ export class AboutUsComponent {
   aboutUs_description: any;
   whoWeAre: any;
 
-  constructor(private webDataService: WebDataService, public translate: TranslateService) {
+  constructor(
+    private webDataService: WebDataService,
+    public translate: TranslateService
+  ) {
     this.fetchData();
   }
 
@@ -26,5 +29,9 @@ export class AboutUsComponent {
     this.webDataService.getWhoWewAre().subscribe((data) => {
       this.whoWeAre = data.data;
     });
+  }
+
+  checkLanguage() {
+    return this.translate.currentLang == 'ar';
   }
 }

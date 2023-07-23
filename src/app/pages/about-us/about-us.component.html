@@ -11,6 +11,9 @@
           <li>
             {{ aboutUs_description[0].description }}
           </li>
+          <li>
+            {{ aboutUs_description[1].description }}
+          </li>
         </ul>
         <button class="landingBtn">
           {{ "EXPLOREOURPROJECTS" | translate }}
@@ -30,7 +33,7 @@
         </div>
       </div>
       <div class="col-sm-12 col-md-6" style="position: relative">
-        <div class="about-element one" dir="rtl">
+        <div class="about-element one">
           <div class="externalText">
             {{ whoWeAre[0].description }}
           </div>
@@ -52,12 +55,11 @@
 
 <div class="Application_Releases">
   <div class="container">
-    <div class="row">
+    <div class="row" ngClass="checkLanguage ? rowRtl : ">
       <div class="col-sm-12 col-md-5">
-        <h2 class="Applications_header">New Release</h2>
+        <h2 class="Applications_header">{{ "NEWRELEASE" | translate }}</h2>
         <p>
-          Now, you have the option to download our mobile application and order
-          your service on the go, with unlimited features and offers.
+          {{ "NEWRELEASESUBHEADING" | translate }}
         </p>
         <div class="imgs-parent">
           <img class="app" src="assets/g-play.png" alt="google_play_Img" />
