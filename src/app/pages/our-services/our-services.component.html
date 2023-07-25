@@ -14,23 +14,23 @@
         <div class="stepperContainer">
           <div
             class="stepperCard"
-            *ngFor="let item of stepperData; let i = index"
+            *ngFor="let item of steps; let i = index"
             (click)="changeStep($event, i)"
             [class.active]="stepNumber === i"
           >
             <div class="stepperCardImage">
               <img
-                src="{{ item.Image }}"
+                src="{{ item.icon }}"
                 style="height: 50px; width: 50px"
                 alt="item.Image"
               />
             </div>
             <div ngClass="checkLanguage ? stepperCardDataRtl : stepperCardData">
               <p>
-                {{ item.Label }}
+                {{ item.serviceName }}
               </p>
               <p>
-                {{ item.Description }}
+                {{ item.serviceDescription }}
               </p>
             </div>
           </div>
@@ -39,16 +39,16 @@
       <div class="col-md-6 col-sm-12">
         <div class="displayedData">
           <div class="displayedText">
-            <p>{{ stepperData[stepNumber].Label }}</p>
+            <p>{{ steps[stepNumber].serviceName }}</p>
             <p>
-              {{ stepperData[stepNumber].DisplayedText }}
+              {{ steps[stepNumber].imageDescription }}
             </p>
           </div>
           <div class="displayedImg">
             <img
-              src="{{ stepperData[stepNumber].DisplayedImg }}"
+              src="{{ steps[stepNumber].image }}"
               alt=""
-              style="width: 100%"
+              style="width: 300px; height: 300px"
             />
           </div>
         </div>

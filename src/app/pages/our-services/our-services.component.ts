@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { WebDataService } from 'src/app/web-data.service';
 @Component({
   selector: 'app-our-services',
   templateUrl: './our-services.component.html',
@@ -58,11 +59,18 @@ export class OurServicesComponent {
     },
   ];
 
-  constructor(public translate: TranslateService) {}
+  steps: any;
+
+  constructor(
+    public translate: TranslateService,
+    public webService: WebDataService
+  ) {
+    this.fetchData();
+  }
 
   ngOnInit(): void {
     setInterval(() => {
-      if (this.stepNumber == this.stepperData.length - 1) {
+      if (this.stepNumber == this.steps.length - 1) {
         this.stepNumber = 0;
         return;
       }
@@ -73,7 +81,15 @@ export class OurServicesComponent {
   changeStep(e: Event, step: number) {
     this.stepNumber = step;
   }
-  checkLanguage() {
-    return this.translate.currentLang == 'ar';
+
+  fetchData(): void {
+    this.getServices();
+  }
+
+  getServices() {
+    return this.webService.getServices().subscribe((data) => {
+      this.steps = data.data;
+      console.log(this.steps);
+    });
   }
 }

@@ -6,7 +6,7 @@
           <p class="card-header">{{ "CONTACTUS" | translate }}</p>
           <p class="card-subtitle">{{ "WAITINGFORINQUIRIES" | translate }}</p>
         </div>
-        <form class="contact-data" (ngSubmit)="handleRequest()">
+        <form #form="ngForm" class="contact-data" (ngSubmit)="handleRequest()">
           <input
             required="true"
             nz-input
@@ -19,7 +19,7 @@
             nz-input
             nzSize="large"
             [placeholder]="'ENTERYOURPHONENUMBER' | translate"
-            [(ngModel)]="PhoneNumber"
+            [(ngModel)]="Phone"
           />
           <input
             required="true"

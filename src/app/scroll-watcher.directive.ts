@@ -14,13 +14,13 @@ export class ScrollWatcherDirective {
       window.pageYOffset || document.documentElement.scrollTop;
     const section = document.querySelector(this.appScrollWatcher);
     // console.log(section);
-    console.log(currentScrollPos);
+    // console.log(currentScrollPos);
 
     if (section) {
       const sectionTop = (section as HTMLElement).offsetTop;
       const sectionBottom = sectionTop + (section as HTMLElement).offsetHeight;
-      console.log(sectionTop);
-      console.log(sectionBottom);
+      // console.log(sectionTop);
+      // console.log(sectionBottom);
 
       if (currentScrollPos >= sectionTop && currentScrollPos < sectionBottom) {
         this.el.nativeElement.classList.add('active');

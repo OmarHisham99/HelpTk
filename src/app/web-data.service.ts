@@ -38,4 +38,7 @@ export class WebDataService {
   getReviews(): Observable<any> {
     return this.http.get(this.apiUrl + 'Review/Get?Language=EN');
   }
+  getServices(): Observable<any> {
+    return this.http.get(this.apiUrl + 'Service/Get?Language=EN');
+  }
 }

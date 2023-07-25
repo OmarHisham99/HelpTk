@@ -10,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class ContactUsComponent {
   Name: string = '';
   Email: string = '';
-  PhoneNumber: string = '';
+  Phone: string = '';
   Message: string = '';
 
   constructor(
@@ -26,7 +26,9 @@ export class ContactUsComponent {
     this.getContactInfo();
   }
 
-  handleRequest(): void {}
+  handleRequest(): void {
+    console.log(this.Name, this.Email, this.Phone, this.Message);
+  }
   getContactInfo(): void {
     this.webDataService.getCompanyInfo().subscribe((data) => {
       this.contactUsInfo = data.data;
