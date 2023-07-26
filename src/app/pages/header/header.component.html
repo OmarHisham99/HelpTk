@@ -39,41 +39,53 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a
-            appScrollWatcher="body"
-            class="nav-link active"
+            href="#body"
+            class="nav-link"
+            [class.active]="activeLink === 'body'"
             aria-current="page"
-            (click)="scrollToSection($event, 'body')"
             >{{ "HOME" | translate }}</a
           >
         </li>
         <li class="nav-item">
           <a
-            appScrollWatcher="about-us"
             class="nav-link"
-            (click)="scrollToSection($event, 'about-us')"
+            [class.active]="activeLink === 'about-us'"
+            href="#about-us"
             >{{ "ABOUTUS" | translate }}</a
           >
         </li>
 
-        <li class="nav-item" (click)="scrollToSection($event, 'our-services')">
-          <a appScrollWatcher="our-services" class="nav-link">{{
-            "OURSERVICES" | translate
-          }}</a>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="activeLink === 'our-services'"
+            href="#our-services"
+            >{{ "OURSERVICES" | translate }}</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="scrollToSection($event, 'portfolio')">{{
-            "PORTFOLIO" | translate
-          }}</a>
+          <a
+            class="nav-link"
+            [class.active]="activeLink === 'portfolio'"
+            href="#portfolio"
+            >{{ "PORTFOLIO" | translate }}</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="scrollToSection($event, 'our-news')">{{
-            "NEWS" | translate
-          }}</a>
+          <a
+            class="nav-link"
+            [class.active]="activeLink === 'our-news'"
+            href="#our-news"
+            >{{ "NEWS" | translate }}</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="scrollToSection($event, 'contact-us')">{{
-            "CONTACTUS" | translate
-          }}</a>
+          <a
+            class="nav-link"
+            href="#contact-us"
+            [class.active]="activeLink === 'contact-us'"
+            >{{ "CONTACTUS" | translate }}</a
+          >
         </li>
       </ul>
       <div class="menuParent d-flex" role="search">

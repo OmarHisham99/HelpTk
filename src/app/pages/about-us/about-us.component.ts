@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { WebDataService } from 'src/app/web-data.service';
 import { TranslateService } from '@ngx-translate/core';
+import { ScrollService } from 'src/app/services/scrollService';
 @Component({
   selector: 'app-about-us',
   templateUrl: './about-us.component.html',
@@ -13,9 +14,17 @@ export class AboutUsComponent {
 
   constructor(
     private webDataService: WebDataService,
-    public translate: TranslateService
+    public translate: TranslateService,
+    private scrollService: ScrollService
   ) {
     this.fetchData();
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+    const currentScrollPos =
+      window.pageYOffset || document.documentElement.scrollTop;
+    this.scrollService.updateScrollPosition(currentScrollPos);
   }
 
   fetchData(): void {

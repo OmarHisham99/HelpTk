@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef,HostListener } from '@angular/core';
 import { WebDataService } from 'src/app/web-data.service';
 import { TranslateService } from '@ngx-translate/core';
 import { ScrollService } from 'src/app/services/scrollService';
@@ -18,6 +18,13 @@ export class BodyComponent {
   ) {
     this.fetchData();
     this.youtubeLink = 'https://www.youtube.com/embed/';
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+    const currentScrollPos =
+      window.pageYOffset || document.documentElement.scrollTop;
+    this.scrollService.updateScrollPosition(currentScrollPos);
   }
 
   scrollToId(id: string) {
