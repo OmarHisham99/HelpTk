@@ -28,6 +28,7 @@ export class AboutUsComponent {
     });
     this.webDataService.getWhoWewAre().subscribe((data) => {
       this.whoWeAre = data.data;
+      console.log(data.data);
     });
   }
 
