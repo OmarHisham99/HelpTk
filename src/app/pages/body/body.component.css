@@ -28,6 +28,20 @@
   padding: 30px;
   max-width: 100%;
 }
+
+@media (max-width: 980px) {
+  .landing-row {
+    height: 100vh;
+    gap: 0;
+  }
+  .landing-row > div:first-of-type {
+    row-gap: 15px;
+  }
+  .Circle {
+    width: 280px;
+    height: 280px;
+  }
+}
 .Circle > div {
   display: flex;
   height: 100%;
@@ -74,6 +88,14 @@
   color: #fff;
   padding: 11px 65px;
   border-radius: 15px;
+  border: 1px solid transparent;
+  transition: 0.3s ease;
+}
+
+.landingBtn:hover {
+  background-color: #fff;
+  color: #0e2e5c;
+  border-color: #0e2e5c;
 }
 
 .landing-row > div:nth-of-type(2) {

@@ -6,6 +6,7 @@
 .landing-row {
   min-height: calc(100vh - 96px);
   /* border: 1px solid red; */
+  row-gap: 100px;
 }
 
 .landing-row > div:first-of-type {
@@ -29,13 +30,20 @@
   color: #656565;
   font-weight: 300;
 }
-
 .landingBtn {
   border: none;
   background: #0e2e5c;
   color: #fff;
   padding: 11px 65px;
   border-radius: 15px;
+  border: 1px solid transparent;
+  transition: 0.3s ease;
+}
+
+.landingBtn:hover {
+  background-color: transparent;
+  color: #0e2e5c;
+  border-color: #0e2e5c;
 }
 
 .landing-row > div:first-of-type.flow-imgs {
@@ -125,6 +133,11 @@
 @media (max-width: 765px) {
   .About2 .about-circle-parent {
     max-width: 100%;
+    width: 100%;
+  }
+  .About2 .About-Circle {
+    width: 300px;
+    height: 300px;
   }
 }
 .about-element {
@@ -196,14 +209,17 @@
   text-align: left;
 }
 .about-element.one .externalText {
-  /* z-index: -1;
-  top: -200px; */
+  z-index: -1;
+  top: -200px;
 }
 .about-element.two .externalText {
+  z-index: -1;
   top: 0;
 }
 .about-element.three .externalText {
-  /* top: 200px; */
+  z-index: -1;
+  top: 200px;
+  color: transparent !important;
 }
 
 .about-element.one {
@@ -298,7 +314,7 @@
   .about-element.two:hover .externalText {
     background-color: #f6c98f;
     color: #000 !important;
-    z-index: 1 !important;
+    z-index: 1;
     top: 0;
   }
 
