@@ -11,7 +11,8 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { MatMenuModule } from '@angular/material/menu';
@@ -36,7 +37,8 @@ import { WebDataService } from './web-data.service';
 import { ScrollWatcherDirective } from './scroll-watcher.directive';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
+  import { HotToastModule } from '@ngneat/hot-toast';
+  import { MatSnackBarModule } from '@angular/material/snack-bar';
 registerLocaleData(en);
 
 @NgModule({
@@ -60,6 +62,7 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     MatButtonModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     NzMenuModule,
     MatMenuModule,
@@ -72,6 +75,8 @@ registerLocaleData(en);
     TextFieldModule,
     NzInputModule,
     NzButtonModule,
+    MatSnackBarModule,
+    HotToastModule.forRoot(),
     TranslateModule.forRoot({
       defaultLanguage: 'en',
       loader: {

@@ -41,4 +41,18 @@ export class WebDataService {
   getServices(): Observable<any> {
     return this.http.get(this.apiUrl + 'Service/Get?Language=EN');
   }
+
+  postContactUs(
+    name: string,
+    phone: string,
+    email: string,
+    message: string
+  ): Observable<any> {
+    return this.http.post(this.apiUrl + 'Complaint/Create', {
+      name,
+      phone,
+      email,
+      message,
+    });
+  }
 }

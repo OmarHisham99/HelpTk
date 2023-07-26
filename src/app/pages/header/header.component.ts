@@ -14,7 +14,7 @@ export class HeaderComponent {
   scrollToSection(e: Event, sectionId: string): void {
     const element = document.getElementById(sectionId);
     const links = document.querySelectorAll('.nav-link');
-    console.log(links);
+    // console.log(links);
     e.preventDefault();
     links.forEach((link) => {
       link.classList.remove('active');

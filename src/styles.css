@@ -78,3 +78,8 @@ ngb-carousel {
   max-width: 90vw !important;
   padding: 20px !important;
 }
+
+/* ::ng-deep .custom-snackbar {
+  background-color: green;
+  color: white;
+} */

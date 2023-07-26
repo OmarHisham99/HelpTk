@@ -6,34 +6,112 @@
           <p class="card-header">{{ "CONTACTUS" | translate }}</p>
           <p class="card-subtitle">{{ "WAITINGFORINQUIRIES" | translate }}</p>
         </div>
-        <form #form="ngForm" class="contact-data" (ngSubmit)="handleRequest()">
-          <input
-            required="true"
-            nz-input
-            nzSize="large"
-            [placeholder]="'YOURNAME' | translate"
-            [(ngModel)]="Name"
-          />
-          <input
-            required="true"
-            nz-input
-            nzSize="large"
-            [placeholder]="'ENTERYOURPHONENUMBER' | translate"
-            [(ngModel)]="Phone"
-          />
-          <input
-            required="true"
-            nz-input
-            nzSize="large"
-            [placeholder]="'ENTERYOUREMAIL' | translate"
-            [(ngModel)]="Email"
-          />
-          <textarea
-            [placeholder]="'LEAVEYOURMESSAGE' | translate"
-            rows="4"
-            nz-input
-            [(ngModel)]="Message"
-          ></textarea>
+        <form
+          [formGroup]="requiredForm"
+          class="contact-data"
+          (ngSubmit)="handleRequest()"
+        >
+          <div class="form-group">
+            <input
+              required
+              nz-input
+              formControlName="name"
+              nzSize="large"
+              [placeholder]="'YOURNAME' | translate"
+              name="name"
+              [(ngModel)]="name"
+            />
+            <div
+              *ngIf="
+                requiredForm.controls['name'].invalid &&
+                requiredForm.controls['name'].touched
+              "
+              style="margin-top: 3px; height: min-content"
+            >
+              <div
+                *ngIf="requiredForm.controls['name'].errors.required"
+                style="color: red"
+              >
+                *Name is required.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              required
+              nz-input
+              formControlName="phone"
+              nzSize="large"
+              placeholder="Enter Your Phone Number"
+              name="phone"
+              type="number"
+              [(ngModel)]="phone"
+            />
+            <div
+              *ngIf="
+                requiredForm.controls['phone'].invalid &&
+                requiredForm.controls['phone'].touched
+              "
+              style="margin-top: 3px; height: min-content"
+            >
+              <div
+                *ngIf="requiredForm.controls['phone'].errors.required"
+                style="color: red"
+              >
+                *phone is required. phone should be 11 digits.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              required
+              nz-input
+              formControlName="email"
+              nzSize="large"
+              placeholder="Enter Your Email"
+              name="email"
+              [(ngModel)]="email"
+            />
+            <div
+              *ngIf="
+                requiredForm.controls['email'].invalid &&
+                requiredForm.controls['email'].touched
+              "
+              style="margin-top: 3px; height: min-content"
+            >
+              <div
+                *ngIf="requiredForm.controls['email'].errors.required"
+                style="color: red"
+              >
+                *email is required. email should contain @
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea
+              required
+              [placeholder]="'LEAVEYOURMESSAGE' | translate"
+              rows="4"
+              formControlName="message"
+              nz-input
+              name="message"
+              [(ngModel)]="message"
+            ></textarea>
+            <div
+              *ngIf="
+                requiredForm.controls['message'].invalid &&
+                requiredForm.controls['message'].touched
+              "
+              style="margin-top: 3px; height: min-content"
+            >
+              <div
+                *ngIf="requiredForm.controls['message'].errors.required"
+                style="color: red"
+              >
+                *Message is required.
+              </div>
+            </div>
+          </div>
           <div class="btn-place">
             <button
               nz-button

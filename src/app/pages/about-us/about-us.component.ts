@@ -24,7 +24,7 @@ export class AboutUsComponent {
     });
     this.webDataService.getAboutUsDescription().subscribe((data) => {
       this.aboutUs_description = data.data;
-      console.log(this.aboutUs_description);
+      // console.log(this.aboutUs_description);
     });
     this.webDataService.getWhoWewAre().subscribe((data) => {
       this.whoWeAre = data.data;

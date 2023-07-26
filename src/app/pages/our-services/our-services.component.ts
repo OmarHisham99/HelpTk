@@ -89,7 +89,7 @@ export class OurServicesComponent {
   getServices() {
     return this.webService.getServices().subscribe((data) => {
       this.steps = data.data;
-      console.log(this.steps);
+      // console.log(this.steps);
     });
   }
 }

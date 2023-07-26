@@ -70,7 +70,7 @@ export class TestimonialsComponent {
   fetchData(): void {
     this.webDataService.getReviews().subscribe((data) => {
       this.reviews = data.data;
-      console.log(this.reviews);
+      // console.log(this.reviews);
     });
   }
 }
