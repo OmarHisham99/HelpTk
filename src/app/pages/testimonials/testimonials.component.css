@@ -91,7 +91,7 @@ h2 {
 }
 
 .carousel {
-  height: 300px;
+  height: fit-content;
   background: #eaf3fa70;
 }
 
@@ -99,14 +99,13 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  flex-direction: column;
 }
-
+.carousel .carousel-item .testimonial-item {
+  flex-direction: column-reverse;
+  height: fit-content;
+}
 .carousel .carousel-item img {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: -25%;
 }
 
 @media (max-width: 765px) {

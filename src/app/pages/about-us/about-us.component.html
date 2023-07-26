@@ -26,27 +26,21 @@
 <div class="About2">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 col-md-6">
-        <h2 class="about-header">{{ "ABOUTHELPTK" | translate }}</h2>
-        <div class="about-circle-parent">
-          <div class="About-Circle">{{ "WHOWEARE" | translate }}..</div>
-        </div>
+      <div
+        class="col-sm-12 col-md-6 row-gap-2 p-3 d-flex justify-content-center"
+      >
+        <div class="circle">Who We Are..</div>
       </div>
-      <div class="col-sm-12 col-md-6" style="position: relative">
-        <div class="about-element one">
-          <div class="externalText">
-            {{ whoWeAre[0].description }}
+      <div class="col-sm-12 col-md-6 row-gap-2 p-3 boxes-col">
+        <div
+          class="parent_box"
+          *ngFor="let box of whoWeAre; let indexOfelement = index"
+        >
+          <div class="box">
+            <div class="leftS">{{ indexOfelement + 1 }}</div>
+            <div class="rightS">{{ box?.title }}</div>
           </div>
-        </div>
-        <div class="about-element two">
-          <div class="externalText">
-            {{ whoWeAre[1].description }}
-          </div>
-        </div>
-        <div class="about-element three">
-          <div class="externalText">
-            {{ whoWeAre[2].description }}
-          </div>
+          <div class="text">{{ box?.description }}</div>
         </div>
       </div>
     </div>
