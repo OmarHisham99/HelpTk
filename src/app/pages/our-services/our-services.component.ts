@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { WebDataService } from 'src/app/web-data.service';
 @Component({
   selector: 'app-our-services',
   templateUrl: './our-services.component.html',
@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class OurServicesComponent {
   stepNumber = 0;
-
   stepperData = [
     {
       Label: 'Mobile Application',
@@ -59,9 +58,15 @@ export class OurServicesComponent {
     },
   ];
 
+  steps: any;
+
+  constructor(public webService: WebDataService) {
+    this.fetchData();
+  }
+
   ngOnInit(): void {
     setInterval(() => {
-      if (this.stepNumber == this.stepperData.length - 1) {
+      if (this.stepNumber == this.steps.length - 1) {
         this.stepNumber = 0;
         return;
       }
@@ -69,9 +74,17 @@ export class OurServicesComponent {
     }, 3000);
   }
 
-  constructor() {}
-
   changeStep(e: Event, step: number) {
     this.stepNumber = step;
+  }
+
+  fetchData(): void {
+    this.getServices();
+  }
+
+  getServices() {
+    return this.webService.getServices().subscribe((data) => {
+      this.steps = data.data;
+    });
   }
 }

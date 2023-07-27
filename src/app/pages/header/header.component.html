@@ -39,33 +39,50 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a
-            class="nav-link active"
+            href="#body"
+            class="nav-link"
+            [class.active]="activeLink === 'body'"
             aria-current="page"
-            (click)="scrollToSection($event, 'body')"
             >Home</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="scrollToSection($event, 'about-us')"
+          <a
+            class="nav-link"
+            [class.active]="activeLink === 'about-us'"
+            href="#about-us"
             >About Us</a
           >
         </li>
 
-        <li class="nav-item" (click)="scrollToSection($event, 'our-services')">
-          <a class="nav-link">Our Services</a>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="activeLink === 'our-services'"
+            href="#our-services"
+            > Our Services </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="scrollToSection($event, 'portfolio')"
+          <a
+            class="nav-link"
+            [class.active]="activeLink === 'portfolio'"
+            href="#portfolio"
             >Portfolio</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="scrollToSection($event, 'our-news')"
+          <a
+            class="nav-link"
+            [class.active]="activeLink === 'our-news'"
+            href="#our-news"
             >News</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="scrollToSection($event, 'contact-us')"
+          <a
+            class="nav-link"
+            href="#contact-us"
+            [class.active]="activeLink === 'contact-us'"
             >Contact Us</a
           >
         </li>

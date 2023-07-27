@@ -11,8 +11,9 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { MatMenuModule } from '@angular/material/menu';
 import { MenuComponent } from './pages/menu/menu.component';
@@ -32,7 +33,9 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { TestimonialsComponent } from './pages/testimonials/testimonials.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { MapComponent } from './pages/map/map.component';
-
+import { WebDataService } from './web-data.service';
+import { HotToastModule } from '@ngneat/hot-toast';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 registerLocaleData(en);
 
 @NgModule({
@@ -55,6 +58,7 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     MatButtonModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     NzMenuModule,
     MatMenuModule,
@@ -67,8 +71,10 @@ registerLocaleData(en);
     TextFieldModule,
     NzInputModule,
     NzButtonModule,
+    MatSnackBarModule,
+    HotToastModule.forRoot(),
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
+  providers: [{ provide: NZ_I18N, useValue: en_US }, WebDataService],
 
   bootstrap: [AppComponent],
 })

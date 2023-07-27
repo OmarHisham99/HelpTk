@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component,Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Helptech';
+  constructor(
+    @Inject(DOCUMENT) private document: Document
+  ) {
+    
+  }
+
+
+  
 }

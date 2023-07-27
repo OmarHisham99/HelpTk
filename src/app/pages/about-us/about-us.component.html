@@ -1,23 +1,18 @@
-<div class="landing">
+<div class="landing" id="About">
   <div class="container">
     <div class="row landing-row">
       <div class="col-sm-12 col-md-6 flow-imgs">
-        <img src="assets/dummy2.jpg" alt="" />
-        <img src="assets/dummy2.jpg" alt="" />
+        <img src="{{ aboutUs_images.secondImage }}" alt="" />
+        <img src="{{ aboutUs_images.firstImage }}" alt="" />
       </div>
       <div class="col-sm-12 col-md-6 about-text">
         <h2>HELP<span>TK</span></h2>
         <ul class="about-points">
           <li>
-            IT assistance is a leader in the world of communications, IT
-            solutions, electronic protection technologies and innovative
-            solutions.
+            {{ aboutUs_description[0].description }}
           </li>
           <li>
-            We offer innovative solutions and specialized support and are
-            committed to providing services and solutions that can provide
-            technology solutions (From start to finish) as well as consulting
-            solutions when required.
+            {{ aboutUs_description[1].description }}
           </li>
         </ul>
         <button class="landingBtn">Explore Our Projects</button>
@@ -29,13 +24,22 @@
 <div class="About2">
   <div class="container">
     <div class="row">
-      <h2 class="about-header">About HelpTK</h2>
-      <div class="about-circle-parent">
-        <div class="About-Circle">who we are..</div>
-
-        <div class="about-element one">1</div>
-        <div class="about-element two">2</div>
-        <div class="about-element three">3</div>
+      <div
+        class="col-sm-12 col-md-6 row-gap-2 p-3 d-flex justify-content-center"
+      >
+        <div class="circle">Who We Are..</div>
+      </div>
+      <div class="col-sm-12 col-md-6 row-gap-2 p-3 boxes-col">
+        <div
+          class="parent_box"
+          *ngFor="let box of whoWeAre; let indexOfelement = index"
+        >
+          <div class="box">
+            <div class="leftS">{{ indexOfelement + 1 }}</div>
+            <div class="rightS">{{ box?.title }}</div>
+          </div>
+          <div class="text">{{ box?.description }}</div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <div class="services">
   <div class="container">
-    <div style="width: 40%">
+    <div class="servicesLeftSide">
       <h2 class="services-heading">Services</h2>
       <p class="services-subHeading">
         We believe clients drive businesses forward . they need the right tools
@@ -16,23 +16,23 @@
         <div class="stepperContainer">
           <div
             class="stepperCard"
-            *ngFor="let item of stepperData; let i = index"
+            *ngFor="let item of steps; let i = index"
             (click)="changeStep($event, i)"
             [class.active]="stepNumber === i"
           >
-            <div class="stepperCardImage" >
+            <div class="stepperCardImage">
               <img
-                src="{{ item.Image }}"
+                src="{{ item.icon }}"
                 style="height: 50px; width: 50px"
                 alt="item.Image"
               />
             </div>
-            <div class="stepperCardData">
+            <div>
               <p>
-                {{ item.Label }}
+                {{ item.serviceName }}
               </p>
               <p>
-                {{ item.Description }}
+                {{ item.serviceDescription }}
               </p>
             </div>
           </div>
@@ -41,17 +41,13 @@
       <div class="col-md-6 col-sm-12">
         <div class="displayedData">
           <div class="displayedText">
-            <p>{{ stepperData[stepNumber].Label }}</p>
+            <p>{{ steps[stepNumber].serviceName }}</p>
             <p>
-              {{ stepperData[stepNumber].DisplayedText }}
+              {{ steps[stepNumber].imageDescription }}
             </p>
           </div>
           <div class="displayedImg">
-            <img
-              src="{{ stepperData[stepNumber].DisplayedImg }}"
-              alt=""
-              style="width: 100%"
-            />
+            <img src="{{ steps[stepNumber].image }}" alt="" />
           </div>
         </div>
       </div>

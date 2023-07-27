@@ -1,32 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    margin:  0 ;
-    padding:  0 ;
-
+  margin: 0;
+  padding: 0;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
-
-.ant-tabs-ink-bar-animated{
+.ant-tabs-ink-bar-animated {
   display: none !important;
 }
 
-.ant-tabs .ant-tabs-tab-active a
-{
-  color: #0E2E5C !important;
-  background: #F39B27 !important;
+.ant-tabs .ant-tabs-tab-active a {
+  color: #0e2e5c !important;
+  background: #f39b27 !important;
   font-weight: 500 !important;
 }
 
-.ant-tabs-tab+.ant-tabs-tab {
+.ant-tabs-tab + .ant-tabs-tab {
   margin: 0 0 0 10px;
 }
-
 
 ngb-carousel {
   max-width: 700px;
@@ -50,18 +58,52 @@ ngb-carousel {
   transition: opacity 1.2s ease-in-out, visibility 1.2s;
   z-index: -1;
 }
-.carousel-item.active{
+.carousel-item.active {
   opacity: 1;
   visibility: visible;
   z-index: 10;
 }
 .carousel-control-prev {
-   z-index: 20;
+  z-index: 20;
 }
 
 .carousel-control-next {
-   z-index: 20;
-}
-.carousel-indicators{
   z-index: 20;
+}
+.carousel-indicators {
+  z-index: 20;
+}
+
+.ant-tabs-nav-list {
+  max-width: 90vw !important;
+  padding: 20px !important;
+}
+
+/* ::ng-deep .custom-snackbar {
+  background-color: green;
+  color: white;
+} */
+body {
+  font-size: 16px;
+}
+
+/* Adjust font size for smaller screens */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Adjust font size for even smaller screens */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+/* Adjust font size for larger screens */
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
 }

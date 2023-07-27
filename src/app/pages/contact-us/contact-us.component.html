@@ -4,36 +4,114 @@
       <div class="contact-form col-md-8 col-sm-12">
         <div>
           <p class="card-header">Contact Us</p>
-          <p class="card-subtitle">waiting for your inquiries</p>
+          <p class="card-subtitle">Waiting For You Inquiries</p>
         </div>
-        <form class="contact-data" (ngSubmit)="handleRequest()">
-          <input
-            required="true"
-            nz-input
-            nzSize="large"
-            placeholder="Your Name"
-            [(ngModel)]="Name"
-          />
-          <input
-            required="true"
-            nz-input
-            nzSize="large"
-            placeholder="Enter Your Phone Number"
-            [(ngModel)]="PhoneNumber"
-          />
-          <input
-            required="true"
-            nz-input
-            nzSize="large"
-            placeholder="Enter Your Email"
-            [(ngModel)]="Email"
-          />
-          <textarea
-            placeholder="Leave Your Message"
-            rows="4"
-            nz-input
-            [(ngModel)]="Message"
-          ></textarea>
+        <form
+          [formGroup]="requiredForm"
+          class="contact-data"
+          (ngSubmit)="handleRequest()"
+        >
+          <div class="form-group">
+            <input
+              required
+              nz-input
+              formControlName="name"
+              nzSize="large"
+              placeholder="Enter Your Name"
+              name="name"
+              [(ngModel)]="name"
+            />
+            <div
+              *ngIf="
+                requiredForm.controls['name'].invalid &&
+                requiredForm.controls['name'].touched
+              "
+              style="margin-top: 3px; height: min-content"
+            >
+              <div
+                *ngIf="requiredForm.controls['name'].errors.required"
+                style="color: red"
+              >
+                *Name is required.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              required
+              nz-input
+              formControlName="phone"
+              nzSize="large"
+              placeholder="Enter Your Phone Number"
+              name="phone"
+              type="number"
+              [(ngModel)]="phone"
+            />
+            <div
+              *ngIf="
+                requiredForm.controls['phone'].invalid &&
+                requiredForm.controls['phone'].touched
+              "
+              style="margin-top: 3px; height: min-content"
+            >
+              <div
+                *ngIf="requiredForm.controls['phone'].errors.required"
+                style="color: red"
+              >
+                *phone is required. phone should be 11 digits.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              required
+              nz-input
+              formControlName="email"
+              nzSize="large"
+              placeholder="Enter Your Email"
+              name="email"
+              [(ngModel)]="email"
+            />
+            <div
+              *ngIf="
+                requiredForm.controls['email'].invalid &&
+                requiredForm.controls['email'].touched
+              "
+              style="margin-top: 3px; height: min-content"
+            >
+              <div
+                *ngIf="requiredForm.controls['email'].errors.required"
+                style="color: red"
+              >
+                *email is required. email should contain @
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea
+              required
+              placeholder="Leave Your Message"
+              rows="4"
+              formControlName="message"
+              nz-input
+              name="message"
+              [(ngModel)]="message"
+            ></textarea>
+            <div
+              *ngIf="
+                requiredForm.controls['message'].invalid &&
+                requiredForm.controls['message'].touched
+              "
+              style="margin-top: 3px; height: min-content"
+            >
+              <div
+                *ngIf="requiredForm.controls['message'].errors.required"
+                style="color: red"
+              >
+                *Message is required.
+              </div>
+            </div>
+          </div>
           <div class="btn-place">
             <button
               nz-button
@@ -48,7 +126,7 @@
         </form>
       </div>
       <div class="photo-section col-md-4 col-sm-12">
-        <p class="heading">Contact Info</p>
+        <p class="heading">Contact Us Info</p>
         <p class="subHeading">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid,
           natus delectus, vel nostrum accusamus, quo atque minus veniam nemo
@@ -56,12 +134,12 @@
           quisquam soluta. Voluptas.
         </p>
         <p class="heading">Address</p>
-        <p class="subHeading">4455 Aldeyafa Street/ Najran/ KSA</p>
-        <p class="heading">Phone Number</p>
-        <p class="subHeading">(017) 522 2254</p>
+        <p class="subHeading">{{ contactUsInfo.address }}</p>
+        <p class="heading">Phone</p>
+        <p class="subHeading">{{ contactUsInfo.phone }}</p>
 
         <p class="heading">Email</p>
-        <p class="subHeading">Admin@Helptk.com</p>
+        <p class="subHeading">{{ contactUsInfo.email }}</p>
       </div>
     </div>
   </div>
