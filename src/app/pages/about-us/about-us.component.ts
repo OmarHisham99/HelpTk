@@ -1,6 +1,5 @@
 import { Component, HostListener } from '@angular/core';
 import { WebDataService } from 'src/app/web-data.service';
-import { TranslateService } from '@ngx-translate/core';
 import { ScrollService } from 'src/app/services/scrollService';
 @Component({
   selector: 'app-about-us',
@@ -14,7 +13,6 @@ export class AboutUsComponent {
 
   constructor(
     private webDataService: WebDataService,
-    public translate: TranslateService,
     private scrollService: ScrollService
   ) {
     this.fetchData();
@@ -39,9 +37,5 @@ export class AboutUsComponent {
       this.whoWeAre = data.data;
       console.log(data.data);
     });
-  }
-
-  checkLanguage() {
-    return this.translate.currentLang == 'ar';
   }
 }

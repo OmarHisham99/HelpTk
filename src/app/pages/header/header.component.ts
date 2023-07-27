@@ -1,5 +1,4 @@
 import { Component, ElementRef } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 import { ScrollService } from 'src/app/services/scrollService';
 @Component({
   selector: 'app-header',
@@ -11,7 +10,6 @@ export class HeaderComponent {
   sectionOffsets: { [key: string]: number } = {};
   constructor(
     private elementRef: ElementRef,
-    public translate: TranslateService,
     private scrollService: ScrollService
   ) {
     this.sectionOffsets = {

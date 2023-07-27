@@ -3,8 +3,8 @@
     <div class="contact-card row">
       <div class="contact-form col-md-8 col-sm-12">
         <div>
-          <p class="card-header">{{ "CONTACTUS" | translate }}</p>
-          <p class="card-subtitle">{{ "WAITINGFORINQUIRIES" | translate }}</p>
+          <p class="card-header">Contact Us</p>
+          <p class="card-subtitle">Waiting For You Inquiries</p>
         </div>
         <form
           [formGroup]="requiredForm"
@@ -17,7 +17,7 @@
               nz-input
               formControlName="name"
               nzSize="large"
-              [placeholder]="'YOURNAME' | translate"
+              placeholder="Enter Your Name"
               name="name"
               [(ngModel)]="name"
             />
@@ -90,7 +90,7 @@
           <div class="form-group">
             <textarea
               required
-              [placeholder]="'LEAVEYOURMESSAGE' | translate"
+              placeholder="Leave Your Message"
               rows="4"
               formControlName="message"
               nz-input
@@ -120,25 +120,25 @@
               nzShape="round"
               type="submit"
             >
-              {{ "SENDMESSAGE" | translate }}
+              Send Message
             </button>
           </div>
         </form>
       </div>
       <div class="photo-section col-md-4 col-sm-12">
-        <p class="heading">{{ "CONTACTINFO" | translate }}</p>
+        <p class="heading">Contact Us Info</p>
         <p class="subHeading">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid,
           natus delectus, vel nostrum accusamus, quo atque minus veniam nemo
           consequuntur vitae accusantium harum cupiditate placeat blanditiis ad
           quisquam soluta. Voluptas.
         </p>
-        <p class="heading">{{ "ADDRESS" | translate }}</p>
+        <p class="heading">Address</p>
         <p class="subHeading">{{ contactUsInfo.address }}</p>
-        <p class="heading">{{ "PHONE" | translate }}</p>
+        <p class="heading">Phone</p>
         <p class="subHeading">{{ contactUsInfo.phone }}</p>
 
-        <p class="heading">{{ "EMAIL" | translate }}</p>
+        <p class="heading">Email</p>
         <p class="subHeading">{{ contactUsInfo.email }}</p>
       </div>
     </div>

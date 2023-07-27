@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 import { WebDataService } from 'src/app/web-data.service';
 @Component({
   selector: 'app-our-services',
@@ -61,10 +60,7 @@ export class OurServicesComponent {
 
   steps: any;
 
-  constructor(
-    public translate: TranslateService,
-    public webService: WebDataService
-  ) {
+  constructor(public webService: WebDataService) {
     this.fetchData();
   }
 
@@ -89,7 +85,6 @@ export class OurServicesComponent {
   getServices() {
     return this.webService.getServices().subscribe((data) => {
       this.steps = data.data;
-      // console.log(this.steps);
     });
   }
 }

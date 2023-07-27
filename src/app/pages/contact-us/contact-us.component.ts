@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { WebDataService } from 'src/app/web-data.service';
-import { TranslateService } from '@ngx-translate/core';
 import {
   FormGroup,
   FormControl,
@@ -24,7 +23,6 @@ export class ContactUsComponent {
   requiredForm: FormGroup | any;
   constructor(
     private webDataService: WebDataService,
-    public translate: TranslateService,
     private fb: FormBuilder,
     private toastService: HotToastService,
     private _snackBar: MatSnackBar

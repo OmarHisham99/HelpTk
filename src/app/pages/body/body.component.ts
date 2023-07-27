@@ -1,6 +1,5 @@
 import { Component, ElementRef,HostListener } from '@angular/core';
 import { WebDataService } from 'src/app/web-data.service';
-import { TranslateService } from '@ngx-translate/core';
 import { ScrollService } from 'src/app/services/scrollService';
 @Component({
   selector: 'app-body',
@@ -13,7 +12,6 @@ export class BodyComponent {
   constructor(
     private webDataService: WebDataService,
     private elementRef: ElementRef,
-    public translate: TranslateService,
     private scrollService: ScrollService
   ) {
     this.fetchData();

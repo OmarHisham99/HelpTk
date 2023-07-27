@@ -1,9 +1,11 @@
 <div class="services">
   <div class="container">
     <div class="servicesLeftSide">
-      <h2 class="services-heading">{{ "SERVICES" | translate }}</h2>
+      <h2 class="services-heading">Services</h2>
       <p class="services-subHeading">
-        {{ "SERVICESUBTITLE" | translate }}
+        We believe clients drive businesses forward . they need the right tools
+        to do so. We offer our clients a comprehensive range of services with
+        leading technologies and products.
       </p>
     </div>
 
@@ -25,7 +27,7 @@
                 alt="item.Image"
               />
             </div>
-            <div ngClass="checkLanguage ? stepperCardDataRtl : stepperCardData">
+            <div>
               <p>
                 {{ item.serviceName }}
               </p>
@@ -45,11 +47,7 @@
             </p>
           </div>
           <div class="displayedImg">
-            <img
-              src="{{ steps[stepNumber].image }}"
-              alt=""
-              style="width: 300px; height: 300px"
-            />
+            <img src="{{ steps[stepNumber].image }}" alt="" />
           </div>
         </div>
       </div>

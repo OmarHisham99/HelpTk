@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 import { WebDataService } from 'src/app/web-data.service';
 
 @Component({
@@ -10,10 +9,7 @@ import { WebDataService } from 'src/app/web-data.service';
 export class OurNewsComponent {
   ourNews: any;
 
-  constructor(
-    private webDataService: WebDataService,
-    public translate: TranslateService
-  ) {
+  constructor(private webDataService: WebDataService) {
     this.fetchData();
   }
 

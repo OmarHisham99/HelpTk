@@ -34,10 +34,8 @@ import { TestimonialsComponent } from './pages/testimonials/testimonials.compone
 import { FooterComponent } from './pages/footer/footer.component';
 import { MapComponent } from './pages/map/map.component';
 import { WebDataService } from './web-data.service';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-  import { HotToastModule } from '@ngneat/hot-toast';
-  import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HotToastModule } from '@ngneat/hot-toast';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 registerLocaleData(en);
 
 @NgModule({
@@ -75,21 +73,9 @@ registerLocaleData(en);
     NzButtonModule,
     MatSnackBarModule,
     HotToastModule.forRoot(),
-    TranslateModule.forRoot({
-      defaultLanguage: 'en',
-      loader: {
-        provide: TranslateLoader,
-        useFactory: createTranslateLoader,
-        deps: [HttpClient],
-      },
-    }),
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }, WebDataService],
 
   bootstrap: [AppComponent],
 })
 export class AppModule {}
-
-export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-}

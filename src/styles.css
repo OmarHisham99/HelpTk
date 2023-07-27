@@ -83,3 +83,27 @@ ngb-carousel {
   background-color: green;
   color: white;
 } */
+body {
+  font-size: 16px;
+}
+
+/* Adjust font size for smaller screens */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Adjust font size for even smaller screens */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+/* Adjust font size for larger screens */
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+}
