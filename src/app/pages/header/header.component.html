@@ -60,7 +60,9 @@
             class="nav-link"
             [class.active]="activeLink === 'our-services'"
             href="#our-services"
-            > Our Services </a>
+          >
+            Our Services
+          </a>
         </li>
         <li class="nav-item">
           <a
@@ -87,25 +89,17 @@
           >
         </li>
       </ul>
-      <div class="menuParent d-flex" role="search">
-        <!-- ng ant design menu here -->
-        <img
-          style="width: 20px; margin-right: -10px"
-          src="assets/globe.png"
-          alt="logo"
-        />
 
-        <app-menu></app-menu>
+      <a href="#contact-us">
+        <button
+          mat-raised-button
+          class="contactBtn"
+          style="color: #fff; background-color: #f39b27"
+        >
+          Contact Us
+        </button>
+      </a>
 
-        <!-- ng ant design menu here -->
-      </div>
-      <button
-        mat-raised-button
-        class="contactBtn"
-        style="color: #fff; background-color: #f39b27"
-      >
-        Contact Us
-      </button>
       <!-- <button nz-button nzType="primary">Primary Button</button> -->
     </div>
   </div>
